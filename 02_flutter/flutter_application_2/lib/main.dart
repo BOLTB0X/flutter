@@ -11,19 +11,32 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         // 상중하로 나눠주는 Scaffold() 위젯
         home: Scaffold(
-      body: Row(
-        // 여러위젯을 가로로 배치하는 법
-        // 자동완성 -> ctr + space
-        // crossAxisAlignment: 세로
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(Icons.star),
-          Icon(Icons.star),
-        ],
-      ),
+      // body: Row(
+      //   // 여러위젯을 가로로 배치하는 법
+      //   // 자동완성 -> ctr + space
+      //   // crossAxisAlignment: 세로
+      //   mainAxisAlignment: MainAxisAlignment.center,
+      //   children: [
+      //     Icon(Icons.star),
+      //     Icon(Icons.star),
+      //   ],
+      // ),
       // appBar: AppBar(), // 상단, () 안에 들어갈 위젯
       // body: Container(),
       // bottomNavigationBar: BottomAppBar(), // 하단
+      // 숙제
+      appBar: AppBar(title: Text('Flutter')),
+      body: Text('재밋네'),
+      bottomNavigationBar: BottomAppBar(
+          child: Container(
+              child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(Icons.phone),
+          Icon(Icons.message),
+          Icon(Icons.contact_page),
+        ],
+      ))),
     ));
   }
 }
